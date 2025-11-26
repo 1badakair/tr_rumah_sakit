@@ -31,7 +31,7 @@ if ($stmt->num_rows === 0) {
 $stmt->bind_result($id, $full_name, $email_db, $password_hash);
 $stmt->fetch();
 
-if ($password == $password_hash) {
+if (password_verify($password, $password_hash)) {
     $_SESSION['user_id']    = $id;
     $_SESSION['user_name']  = $full_name;
     $_SESSION['user_email'] = $email_db;
