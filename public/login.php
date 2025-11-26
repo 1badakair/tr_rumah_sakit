@@ -27,6 +27,9 @@ unset($_SESSION['login_err']);
     <button type="submit">Masuk</button>
 </form>
 
+<p><a href="forgot-password.php">Lupa password?</a></p>
+<p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
+
 <hr>
 <p>Atau login dengan:</p>
 <button onclick="location.href='google-login.php'">Google</button>
