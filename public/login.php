@@ -33,7 +33,6 @@ unset($_SESSION['login_err']);
 <hr>
 <p>Atau login dengan:</p>
 <button onclick="location.href='google-login.php'">Google</button>
-<button onclick="location.href='facebook-login.php'">Facebook</button>
 
 </body>
 </html>
