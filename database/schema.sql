@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS db_anahita_hospitals
+CREATE DATABASE IF NOT EXISTS anahita_hospitals
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_general_ci;
-USE db_anahita_hospitals;
+USE anahita_hospitals;
 
 -- tabel login
 CREATE TABLE auth_users (
