@@ -6,14 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Header Rumah Sakit</title>
-
-    <style>
-        /* rasio logo 16:17 */
-        .logo-img {
-            width: 36px;
-            height: calc(36px * 17 / 16);
-        }
-    </style>
 </head>
 
 <body class="bg-gray-900">
@@ -21,7 +13,7 @@
     <header class="bg-white shadow p-4">
     <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center gap-3">
-            <img src="../public/assets/img/logo_anahita.png" alt="Logo" class="logo-img object-cover">
+            <img src="../public/assets/img/logo_anahita.png" alt="Logo" class="logo-img object-cover" style="width:36px; height:calc(36px * 17 / 16);">
 
             <span class="text-xl font-semibold text-gray-800">Anahita Hospital</span>
         </div>

@@ -1,3 +1,0 @@
-ALTER TABLE users
-ADD phone VARCHAR(20) NULL,
-ADD birth_date DATE NULL;

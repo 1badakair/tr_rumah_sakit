@@ -1,13 +1,12 @@
 <?php
-// includes/db.php
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "hospital_db";
+$username = "root";
+$password = "";
+$database = "anahita_hospitals";
 
-$conn = new mysqli($host, $user, $pass, $db);
+$connection = mysqli_connect($host, $username, $password, $database);
 
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+if(!$connection) {
+    die("Koneksi Gagal: ". mysqli_connect_error());
 }
 ?>

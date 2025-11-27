@@ -1,4 +1,5 @@
 <?php
+// public/forgot-password-process.php
 session_start();
 require_once "../includes/db.php";
 
@@ -25,12 +26,13 @@ if (strlen($new_pass) < 8) {
 }
 
 // cek apakah email ada
-$stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+$stmt = $conn->prepare("SELECT id FROM auth_users WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $stmt->store_result();
 
 if ($stmt->num_rows === 0) {
+    $stmt->close();
     $_SESSION['fp_err'] = "Email tidak terdaftar.";
     header("Location: forgot-password.php");
     exit;
@@ -40,7 +42,7 @@ $stmt->close();
 // update password
 $new_hash = password_hash($new_pass, PASSWORD_DEFAULT);
 
-$stmt = $conn->prepare("UPDATE users SET password_hash = ? WHERE email = ?");
+$stmt = $conn->prepare("UPDATE auth_users SET password_hash = ? WHERE email = ?");
 $stmt->bind_param("ss", $new_hash, $email);
 
 if ($stmt->execute()) {
